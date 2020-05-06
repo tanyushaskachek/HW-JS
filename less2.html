@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1.--створити масив та вивести його в консоль:
+      // - з 5 числових значень
+      let block = [1, 2, 3, 4, 5];
+      console.log(block);
+      //   - з 5 стічкових значень
+      let block2 = ["a", "b", "c", "d", "e"];
+      console.log(block2);
+      //     - з 5 значень стрічкового, числового та булевого типу
+      let block3 = [5 > 6, 1 < 4, 3 > 2, 1 > 2, 6 != 6];
+      console.log(block3);
+      // 5.    -Створити пустий масив.Наповнити його будь - якими значеннями звертаючись до конкретного індексу.Вивести в консоль
+      // 7. - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом всередині
+      //
+      for (let i = 0; i < 10; i++) document.write("<div>Good Morning</div>");
+
+      //8. За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині
+      for (let i = 0; i < 10; i++) {
+        document.write(`<div>day № ${i}</div>`);
+      }
+
+      //   9. За допомогою циклу while вивести в документ 201 c блоків h довільним текстом всередині.
+      let counter = 0;
+      while (counter < 20) {
+        let a = document.write("<h1>Good day</h1>");
+        counter++;
+      }
+      //   10. За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині.
+      let counter1 = 0;
+      while (counter1 < 20) {
+        let a = document.write(`<h1>month № ${counter1}</h1>`);
+        counter1++;
+      }
+
+      //   11. Створити масив з 10 числових елементів.Вивести в консоль всі його елементи в циклі.
+      let block4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      {
+        console.log(block4);
+      }
+      // 12.  Створити масив з 10 строкрових елементів.Вивести в консоль всі його елементи в циклі.
+      let block5 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "l"];
+      {
+        console.log(block5);
+      }
+    </script>
+  </body>
+</html>

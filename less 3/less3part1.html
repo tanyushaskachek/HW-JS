@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <script>
+      // 1- создать 5 объектов.В каждом объекте не менее 3х полей.Все объекты разные по набору полей. (Т.е поле name  должно присутствовать только 1 раз в одном объекте)
+      //   let person = { name: "Petia", age: 30, status: "true" };
+      //   let dog = { nickname: "Nessy", breed: "pug", weight: "7kg" };
+      //   let car = { producer: "Reno", model: "Logan", year: 2004 };
+      //   let book = { place: "bookmarket", price1: "200", praceSale: "160" };
+      //   let weekend = { amount: "3 days", holiday: "Easter", status: "official" };
+
+      //   //  2- создать 5 объектов с полностью разным набором полей.В каждом объекте должен присутсвовать массив и внутренний объект.Опишите что угодно, машину, картину, болт...Пример:
+      //   //   let man = { name: 'kokos', skills: ['java', 'js'], wife: { name: 'cherry' } };
+
+      //   let person1 = {
+      //     name: "Petia",
+      //     age: 30,
+      //     status: "true",
+      //     brother: { name: "Lesha", age: 33 },
+      //     skills: ["html", "css"],
+      //   };
+      //   let dog1 = {
+      //     nickname: "Nessy",
+      //     breed: "pug",
+      //     weight: "7kg",
+      //     borned: { weight: "0,3 kg", length: "20 sm" },
+      //     pupies: [2, 4, 6],
+      //   };
+      //   let car1 = {
+      //     producer: "Reno",
+      //     model: "Logan",
+      //     years: [2004, 2009],
+      //     price: { lowest: 100, highest: 200 },
+      //   };
+
+      //   let book1 = {
+      //     place: "bookmarket",
+      //     price1: "200",
+      //     praceSale: "160",
+      //     priceInternet: { lowest: 130, highest: 260 },
+      //     dedicated: ["Vasia", "Petia"],
+      //   };
+      //   let weekend1 = {
+      //     amount: ["Saturday", "Sunday", "Monday"],
+      //     holiday: "Easter",
+      //     status: "official",
+      //     dedicated: { cooking: "done", cleaning: "processing" },
+      //   };
+      //   console.log(person1, dog1, car1, book1, weekend1);
+
+      //   // 3 - При помощи for in вывести все ключи всех объектов из задания 1 и 2
+      //   //   for (const personKey in person) {
+      //   //     console.log(personKey, person[personKey]);
+      //   //   }
+      //   //   for (const person1Key in person1) {
+      //   //     console.log(person1Key);
+      //   //   }
+      //   //   for (const dogKey in dog) {
+      //   //     console.log(dogKey);
+      //   //   }
+      //   //   for (const dog1Key in dog1) {
+      //   //     console.log(dog1Key);
+      //   //   }
+      //   //   for (const carKey in car) {
+      //   //     console.log(carKey);
+      //   //   }
+      //   //   for (const car1Key in car1) {
+      //   //     console.log(car1Key);
+      //   //   }
+      //   //   for (const bookKey in book) {
+      //   //     console.log(bookKey);
+      //   //   }
+      //   //   for (const book1Key in book1) {
+      //   //     console.log(book1Key);
+      //   //   }
+      //   //   for (const weekendKey in weekend) {
+      //   //     console.log(weekendKey);
+      //   //   }
+      //   //   for (const weekend1Key in weekend1) {
+      //   // //     console.log(weekend1Key);
+      //   //   }
+
+      //   // 4 - При помощи Object.keys вывести все ключи всех объектов из задания 1 и 2
+
+      //   let personKey = Object.keys(person);
+      //   console.log(personKey);
+      //   let person1Key = Object.keys(person1);
+      //   console.log(person1Key);
+      //   let dogKey = Object.keys(dog);
+      //   console.log(dogKey);
+      //   let dog1Key = Object.keys(dog1);
+      //   console.log(dog1Key);
+      //   let carKey = Object.keys(car);
+      //   console.log(carKey);
+      //   let car1Key = Object.keys(car1);
+      //   console.log(car1Key);
+      //   let bookKey = Object.keys(book);
+      //   console.log(bookKey);
+      //   let book1Key = Object.keys(book1);
+      //   console.log(book1Key);
+      //   let weekendKey = Object.keys(weekend);
+      //   console.log(weekendKey);
+      //   let weekend1Key = Object.keys(weekend1);
+      //   console.log(weekend1Key);
+
+      //   // 5 - Создать массив из 10 объектов cars и заполнить его машинами с полями модель, год выпуска, мощность, цвет. (Значаения полей могу быть выдуманными)
+      //   let cars = [
+      //     { model: "Reno", year: 2004, power: 20, color: "red" },
+      //     { model: "Audi", years: 2005, power: 25, color: "pink" },
+      //     { model: "BMW", years: 2006, power: 27, color: "yellow" },
+      //     { model: "Bugatti", years: 2007, power: 30, color: "brown" },
+      //     { model: "Dacia", years: 2008, power: 34, color: "blue" },
+      //     { model: "Dodge", years: 2009, power: 33, color: "green" },
+      //     { model: "Fiat", years: 2010, power: 31, color: "orange" },
+      //     { model: "Ford", years: 2011, power: 32, color: "blue" },
+      //     { model: "Ferrari", years: 2012, power: 21, color: "pink" },
+      //     { model: "Honda", years: 2013, power: 26, color: "red" },
+      //   ];
+
+      //   // 6- Создать массив объектов cities и заполнить его объектами с полями название, популяция, страна, регион. (Значаения полей могу быть выдуманными)
+      //   //   n
+      //   let cities = [
+      //     {
+      //       city: "Kiev",
+      //       region: "Kievskiy",
+      //       population: 4000,
+      //       country: "Ukraine",
+      //     },
+      //     {
+      //       city: "Odess",
+      //       region: "Odeskiy",
+      //       population: 2300,
+      //       country: "Ukraine",
+      //     },
+      //     {
+      //       city: "Vishneve",
+      //       region: "Kievskiy",
+      //       population: 20,
+      //       country: "Ukraine",
+      //     },
+      //     {
+      //       city: "Lviv",
+      //       region: "Lvivsliy",
+      //       population: 1500,
+      //       country: "Ukraine",
+      //     },
+      //     {
+      //       city: "Zutomir",
+      //       region: "Zhutomirsky",
+      //       population: 2100,
+      //       country: "Ukraine",
+      //     },
+      //   ];
+
+      //   // 7- Создать массив объектов cars и заполнить его машинами с полями модель, год выпуска, мощность, цвет, водитель.Водитель является отдельным объектом
+      //   //   с полями имя, возраст, пол, стаж.
+      //   let drivers = [
+      //     {
+      //       model: "Reno",
+      //       year: 2004,
+      //       power: 20,
+      //       color: "red",
+      //       driver: { name: "Vasia", age: 28, gender: "M", experience: 3 },
+      //     },
+      //     {
+      //       model: "Audi",
+      //       years: 2005,
+      //       power: 25,
+      //       color: "pink",
+      //       driver: { name: "Petia", age: 20, gender: "M", experience: 1 },
+      //     },
+      //     {
+      //       model: "BMW",
+      //       years: 2006,
+      //       power: 27,
+      //       color: "yellow",
+      //       driver: { name: "Kolia", age: 29, gender: "M", experience: 5 },
+      //     },
+      //     {
+      //       model: "Bugatti",
+      //       years: 2007,
+      //       power: 30,
+      //       color: "brown",
+      //       driver: { name: "Olia", age: 30, gender: "W", experience: 4 },
+      //     },
+      //     {
+      //       model: "Dacia",
+      //       years: 2008,
+      //       power: 34,
+      //       color: "blue",
+      //       driver: { name: "Lesha", age: 25, gender: "M", experience: 1 },
+      //     },
+      //     {
+      //       model: "Dodge",
+      //       years: 2009,
+      //       power: 33,
+      //       color: "green",
+      //       driver: { name: "Vova", age: 26, gender: "M", experience: 2 },
+      //     },
+      //     {
+      //       model: "Fiat",
+      //       years: 2010,
+      //       power: 31,
+      //       color: "orange",
+      //       driver: { name: "Stas", age: 31, gender: "M", experience: 6 },
+      //     },
+      //     {
+      //       model: "Ford",
+      //       years: 2011,
+      //       power: 32,
+      //       color: "blue",
+      //       driver: { name: "Masha", age: 31, gender: "W", experience: 7 },
+      //     },
+      //     {
+      //       model: "Ferrari",
+      //       years: 2012,
+      //       power: 21,
+      //       color: "pink",
+      //       driver: { name: "Vitia", age: 42, gender: "M", experience: 10 },
+      //     },
+      //     {
+      //       model: "Honda",
+      //       years: 2013,
+      //       power: 26,
+      //       color: "red",
+      //       driver: { name: "Katia", age: 35, gender: "W", experience: 9 },
+      //     },
+      //   ];
+
+      //   //  8- проитерировать каждый массив из задания 5, 6, 7 при помощи while.
+      //   //   let i = 0;
+      //   //   while (i < cars.length) {
+      //   //     console.log(cars);
+      //   //     i++;
+      //   //   }
+      //   //   let a = 0;
+      //   //   while (a < 3) {
+      //   //     console.log(cities);
+      //   //     a++;
+      //   //   }
+      //   //   let b = 0;
+      //   //   while (b < 4) {
+      //   //     console.log(drivers);
+      //   //     b++;
+      //   //   }
+      //   //  9- проитерировать каждый массив из задания 5, 6, 7 при помощи for .
+      //   //   for (i = 0; i < cars.length; i++) {
+      //   //     console.log(cars);
+      //   //   }
+      //   //   for (i = 0; i < 5; i++) {
+      //   //     console.log(cities);
+      //   //   }
+      //   //   for (i = 0; i < 6; i++) {
+      //   //     console.log(drivers);
+      //   //   };
+
+      //   //  10- проитерировать каждый массив из задания 5, 6, 7 при помощи  for of.
+      //   for (let car of cars) {
+      //     console.log(cars);
+      //   }
+      //   for (let city of cities) {
+      //     console.log(cities);
+      //   }
+      //   for (let driver of drivers) {
+      //     console.log(drivers);
+      //   };
+      //  11- взять объекты из задания 1 и превратить каждый в json.
+      // let person = { name: "Petia", age: 30, status: "true" };
+      // let dog = { nickname: "Nessy", breed: "pug", weight: "7kg" };
+      // let car = { producer: "Reno", model: "Logan", year: 2004 };
+      // let book = { place: "bookmarket", price1: "200", praceSale: "160" };
+      // let weekend = { amount: "3 days", holiday: "Easter", status: "official" };
+      //
+      // let stringifyPerson = JSON.stringify(person);
+      // console.log(stringifyPerson);
+      // let stringifydog = JSON.stringify(dog);
+      // console.log(stringifydog);
+      // let stringifycar = JSON.stringify(car);
+      // console.log(stringifycar);
+      // let stringifybook = JSON.stringify(book);
+      // console.log(stringifybook);
+      // let stringifyweekend = JSON.stringify(weekend);
+      // console.log(stringifyweekend);
+      //
+      // //  12- взять json из задания 11 и превратить их обратно в объекты.
+      // let parseperson = JSON.parse(stringifyPerson);
+      // console.log(parseperson);
+      // let parsedog = JSON.parse(stringifydog);
+      // console.log(parsedog);
+      // let parsecar = JSON.parse(stringifycar);
+      // console.log(parsecar);
+      // let parsebook = JSON.parse(stringifybook);
+      // console.log(parsebook);
+      // let parseweekend = JSON.parse(stringifyweekend);
+      // console.log(parseweekend);
+      // //  13- взять массив из задания 5, в цикле перебрать его объекты превратив их в json.
+      //   let cars = [
+      //     { model: "Reno", year: 2004, power: 20, color: "red" },
+      //     { model: "Audi", years: 2005, power: 25, color: "pink" },
+      //     { model: "BMW", years: 2006, power: 27, color: "yellow" },
+      //     { model: "Bugatti", years: 2007, power: 30, color: "brown" },
+      //     { model: "Dacia", years: 2008, power: 34, color: "blue" },
+      //     { model: "Dodge", years: 2009, power: 33, color: "green" },
+      //     { model: "Fiat", years: 2010, power: 31, color: "orange" },
+      //     { model: "Ford", years: 2011, power: 32, color: "blue" },
+      //     { model: "Ferrari", years: 2012, power: 21, color: "pink" },
+      //     { model: "Honda", years: 2013, power: 26, color: "red" },
+      //   ];
+      // console.log(cars);
+      //
+      // for (let i = 0; i < cars.length; i++) {
+      //   const car = cars[i];
+      //   console.log(JSON.stringify(car));
+      // };
+      //
+      //
+      //  14- взять массив из задания 6, в цикле перебрать его объекты превратив их в json.
+
+      // let cities = [
+      //   {
+      //     city: "Kiev",
+      //     region: "Kievskiy",
+      //     population: 4000,
+      //     country: "Ukraine",
+      //   },
+      //   {
+      //     city: "Odess",
+      //     region: "Odeskiy",
+      //     population: 2300,
+      //     country: "Ukraine",
+      //   },
+      //   {
+      //     city: "Vishneve",
+      //     region: "Kievskiy",
+      //     population: 20,
+      //     country: "Ukraine",
+      //   },
+      //   {
+      //     city: "Lviv",
+      //     region: "Lvivsliy",
+      //     population: 1500,
+      //     country: "Ukraine",
+      //   },
+      //   {
+      //     city: "Zutomir",
+      //     region: "Zhutomirsky",
+      //     population: 2100,
+      //     country: "Ukraine",
+      //   },
+      // ];
+      //
+      // for (let i = 0; i < cities.length; i++) {
+      //   const city = cities[i];
+      //   console.log(JSON.stringify(city));
+      //
+      // };
+
+      //  15- взять массив из задания 7, в цикле перебрать его объекты превратив их в json и сразу скоприовать в новый массив.
+
+        let drivers = [
+          {
+            model: "Reno",
+            year: 2004,
+            power: 20,
+            color: "red",
+            driver: { name: "Vasia", age: 28, gender: "M", experience: 3 },
+          },
+          {
+            model: "Audi",
+            years: 2005,
+            power: 25,
+            color: "pink",
+            driver: { name: "Petia", age: 20, gender: "M", experience: 1 },
+          },
+          {
+            model: "BMW",
+            years: 2006,
+            power: 27,
+            color: "yellow",
+            driver: { name: "Kolia", age: 29, gender: "M", experience: 5 },
+          },
+          {
+            model: "Bugatti",
+            years: 2007,
+            power: 30,
+            color: "brown",
+            driver: { name: "Olia", age: 30, gender: "W", experience: 4 },
+          },
+          {
+            model: "Dacia",
+            years: 2008,
+            power: 34,
+            color: "blue",
+            driver: { name: "Lesha", age: 25, gender: "M", experience: 1 },
+          },
+          {
+            model: "Dodge",
+            years: 2009,
+            power: 33,
+            color: "green",
+            driver: { name: "Vova", age: 26, gender: "M", experience: 2 },
+          },
+          {
+            model: "Fiat",
+            years: 2010,
+            power: 31,
+            color: "orange",
+            driver: { name: "Stas", age: 31, gender: "M", experience: 6 },
+          },
+          {
+            model: "Ford",
+            years: 2011,
+            power: 32,
+            color: "blue",
+            driver: { name: "Masha", age: 31, gender: "W", experience: 7 },
+          },
+          {
+            model: "Ferrari",
+            years: 2012,
+            power: 21,
+            color: "pink",
+            driver: { name: "Vitia", age: 42, gender: "M", experience: 10 },
+          },
+          {
+            model: "Honda",
+            years: 2013,
+            power: 26,
+            color: "red",
+            driver: { name: "Katia", age: 35, gender: "W", experience: 9 },
+          },
+        ];
+        let drivers2=[];
+      for (let i = 0; i < drivers.length; i++) {
+        const driver = drivers[i];
+        drivers2.push(JSON.stringify(driver));
+      };
+      console.log(drivers2);
+
+
+    </script>
+  </body>
+</html>
