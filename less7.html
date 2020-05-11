@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<form action="" id="form1">-->
+<!--    <input type="text" name="name1" placeholder="text"  id="input1">-->
+<!--    <input type="text" name="name2" placeholder="text"  id="input2">-->
+<!--</form>-->
+<!--<form action="" id="form2">-->
+<!--    <input type="text" name="name21" placeholder="text"  id="input21">-->
+<!--    <input type="text" name="name21" placeholder="text"  id="input22">-->
+<!--</form>-->
+<!--<button type="button" id="btn">ENTER</button>-->
+
+
+<input type="number" name="rows" placeholder="rows"  id="rows">-->
+<input type="number" name="cols" placeholder="cols"  id="cols">-->
+<input type="text" name="tabletext" placeholder="tabletext"  id="tabletext">
+<button type="button" id="btn">create table</button>
+
+
+<div id="content"></div>
+<!--<p><input type="button" id="btn" value="click "></p>-->
+<!--<hi id="text">Good morning</hi>-->
+
+
+<!--    <input id="age" type="number"  placeholder="How old are you ?">-->
+<!--    <button id="btnage">Enter</button>-->
+<!--<ul class="menu" id ="menu">-->
+<!--    <li>-->
+<!--        <a href="#" id="a1">пункт меню</a>-->
+<!--        <ul id="submenu">-->
+<!--            <li><a href="#" >пункт 1</a></li>-->
+<!--            <li><a href="#" >пункт 2</a></li>-->
+<!--            <li><a href="#" >пункт 3</a></li>-->
+<!--        </ul>-->
+<!--    </li>-->
+<!--</ul>-->
+
+    <script>
+    // - Создать произвольный елемент с id = text.  Используя JavaScript, сделайте так, чтобы при клике на кнопку исчезал элемент с id="text".
+    // let text = document.getElementById('text');
+    // let btn = document.getElementById('btn');
+    // btn.onclick = function () {
+    //     text.hidden ? text.hidden = false : text.hidden = true
+    // };
+
+    //     - Создайте кнопку, при клике на которую, она будеsт скрывать сама себя.
+    // btn.onclick = (ev)=> {
+    //     btn.style.display = "none"
+    // };
+
+    // - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18,
+    // та повідомити про це користувача
+
+    // let btnage = document.getElementById('btnage');
+    // btnage.onclick = ev => {
+    //     let age = document.getElementById('age');
+    //     let value = age.value;
+    //     console.log(value);
+    //     if (value<18 && value>0) {
+    //         alert ("You are yanger then 18")
+    //     } if (value>18 && value <150 ) {
+    //         alert ("welcome")
+    //     } else alert ("error")
+    // };
+
+    // - Создайте меню, которое раскрывается/сворачивается при клике
+    //  let a1 = document.getElementById('a1');
+    // let submenu = document.getElementById('submenu');
+    // let flag = false;
+    // a1.onclick = ev => {
+    //     if(flag) {
+    //         submenu.style.display = "block" ;
+    //         flag = false
+    //     } else {
+    //         submenu.style.display = "none" ;
+    //         flag = true
+    //     }
+    // }
+    // - Создать список комментариев , пример объекта коментария - {title : 'lorem', body:'lorem ipsum dolo sit ameti'}.
+    //     Вывести список комментариев в документ, каждый в своем блоке.
+    //     Добавьте каждому комментарию по кнопке для сворачивания его body.
+    // let coments =[
+    //     {title : 'loredgdfm', body:'lorem ipsum dolo sit ameti'},
+    //     {title : 'fgdgdf', body:'fgdfgdfggdfg'},
+    //     {title : 'dffdg', body:'dfdfhdfhdfh'},
+    //     {title : 'dhdfh', body:'dfhfdhfdhdfh'}
+    // ];
+    //
+    //
+    // let outerdiv= document.getElementById('content');
+    //
+    // coments.forEach(item => {
+    //     let innerdiv = document.createElement('div');
+    //     let h2 = document.createElement('h2');
+    //     let p = document.createElement('p');
+    //     let button = document.createElement('button');
+    //     button.innerText="hide";
+    //     h2.innerText=item.title;
+    //     p.innerText=item.body;
+    //     button.onclick =() => {
+    //         p.hidden ? p.hidden = "false" : p.hidden = "true"
+    //     };
+    //     innerdiv.appendChild(h2);
+    //     innerdiv.appendChild(p);
+    //     innerdiv.appendChild(button);
+    //     outerdiv.appendChild(innerdiv);
+    // });
+
+    //
+    // - створити 2 форми  по 2 інпути в кожній. ствоирити кнопку при кліку на яку считується та виводиться на консоль інформація з цих 2х форм.
+    //     Кнопка повинна лежати за межами форм (Щоб ьуникнути  перезавантаження сторінки)
+    // Доступ до інпутів через Forms API. Отже дайте формі та інпутам всі необхідні атрибути.
+    // let btn=document.getElementById('btn');
+    // let input1=document.getElementById('input1');
+    // let input2=document.getElementById('input2')
+    // let input21=document.getElementById('input21')
+    // let input22=document.getElementById('input22')
+    //     btn.onclick =ev => {
+    //         console.log(document.forms.form1.input1.value);
+    //         console.log(input2.value);
+    //         console.log(document.forms.form2.input21.value);
+    //         console.log(input22.value);
+    // };
+    // - Створити функцію, яка генерує таблицю.
+    //     Перший аргумент визначає кількість строк.
+    //     Другий параметр визначає кліькіть ячеєк в кожній строці.
+    //     Третій параметр визначає елемент в який потрібно таблицю додати.
+    //
+    //
+    // let content111= document.getElementById('content');
+    // function createtable (rows,cols, tag) {
+    //     let table = document.createElement('table');
+    //     for (let i = 0; i <rows; i++) {
+    //         const tr =document.createElement('tr');
+    //         for (let j = 0; j < cols; j++) {
+    //             const td = document.createElement('td');
+    //             td.innerHTML = i.toString() +j.toString();
+    //                                              // td.innerHTML = i +j;
+    //                                              // td.innerHTML = i +"" +j
+    //
+    //             tr.appendChild(td);
+    //         }
+    //         table.appendChild(tr);
+    //     } tag.appendChild(table)
+    // }
+    // createtable(4,5,content);
+    // - Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
+    //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
+
+
+    let btn = document.getElementById('btn');
+    let rows = document.getElementById('rows');
+    let cols = document.getElementById('cols');
+    let tabletext = document.getElementById('tabletext');
+
+
+    let content= document.getElementById('content');
+    let table = document.createElement('table');
+
+    btn.onclick =ev => {
+                console.log(rows.value,cols.value);
+        function createtable (rows,cols, tabletext) {
+            for (let i = 0; i <rows; i++) {
+                const tr =document.createElement('tr');
+                for (let j = 0; j < cols; j++) {
+                    const td = document.createElement('td');
+                    td.innerHTML=tabletext
+                    tr.appendChild(td);
+                }
+                table.appendChild(tr);
+            }
+        } content.appendChild(table);
+        createtable(rows.value,cols.value, tabletext.value);
+    };
+
+    // createtable(4,5,content);
+
+    // (Додатковачастина для завдання)
+    //
+    // - Напишите «Карусель» – ленту изображений, которую можно листать влево-вправо нажатием на стрелочки.
+    //
+    // let content= document.getElementById('content');
+    //
+    // let imgarr = [
+    //     {id:1, img_url:"https://geosfera.org/uploads/fotos/gimalai1.jpg"},
+    //     {id:2, img_url: "https://i.pinimg.com/originals/64/98/f4/6498f4ba716eec1ad73a4a4967f6c638.jpg"},
+    //     {id:3, img_url: "https://kipmu.ru/wp-content/uploads/mountain.jpg"}
+    // ];
+    //
+    // let btn1 = document.createElement("button");
+    // let btn2 = document.createElement("button");
+    // let img = document.createElement("img", id="image");
+    // btn1.innerText="left";
+    // btn2.innerText="Right";
+    // let index=0;
+    // img.width = 300;
+    //     img.src= imgarr[index].img_url;
+    // content.appendChild(img);
+    // content.appendChild(btn1);
+    // content.appendChild(btn2);
+    // btn1.onclick = () => {
+    //     index -1 <0 ? index = imgarr.length -1 : index=index-1
+    //     img.src=imgarr[index].img_url
+    // }
+    // btn2.onclick = () => {
+    //     index +1>imgarr.length -1
+    //         ? index = 0
+    //         : index=index+1
+    //     img.src=imgarr[index].img_url
+    // }
+    //
+
+
+    </script>
+</body>
+</html>

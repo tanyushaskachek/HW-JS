@@ -373,59 +373,57 @@
     // курси підвищення кваліфікації, що збільшить йому досвід на 1 рік.
     //     Також спробуйте порахувати суму, яку потрібно потратити для покупки всіх цих авто в циклі
 
-    // function Car (marka, power, price, year, owner) {
-    //     this.marka = marka;
-    //     this.power = power;
-    //     this.price = price;
-    //     this.year = year;
-    //     this.owner = owner;
-    // };
-    // let cars= [
-    //         new Car ("subaru", 400, 5000, 2010, {name: 'Vasia', age: 20, exp: 9}),
-    //         new Car ("bmw", 300, 55000, 2016, {name: 'petya', age: 30, exp: 4}),
-    //         new Car ("mercedes", 165, 10000, 2015, {name: 'olya', age: 28, exp: 1}),
-    //         new Car ("bmw", 300, 5700, 2010, {name: 'andrey', age: 29, exp: 4}),
-    //         new Car ("subaru", 200, 10000, 2008, {name: 'max', age: 31, exp: 5}),
-    //         new Car ("mercedes", 300, 20000, 2019, {name: 'kolya', age: 29, exp: 7}),
-    //         new Car ("subaru", 500, 8000, 2013, {name: 'max', age: 30, exp: 2})];
+    function Car (marka, power, price, year, owner) {
+        this.marka = marka;
+        this.power = power;
+        this.price = price;
+        this.year = year;
+        this.owner = owner;
+    };
+    let cars= [
+            new Car ("subaru", 400, 5000, 2010, {name: 'Vasia', age: 20, exp: 9}),
+            new Car ("bmw", 300, 55000, 2016, {name: 'petya', age: 30, exp: 4}),
+            new Car ("mercedes", 165, 10000, 2015, {name: 'olya', age: 28, exp: 1}),
+            new Car ("bmw", 300, 5700, 2010, {name: 'andrey', age: 29, exp: 4}),
+            new Car ("subaru", 200, 10000, 2008, {name: 'max', age: 31, exp: 5}),
+            new Car ("mercedes", 300, 20000, 2019, {name: 'kolya', age: 29, exp: 7}),
+            new Car ("subaru", 500, 8000, 2013, {name: 'max', age: 30, exp: 2})];
 
-    //
-    // function Driver (name, age, exp) {
-    //     this.name = name;
-    //     this.age = age;
-    //     this.exp = exp;
-    // };
-    // let drivers = [
-    //     new Driver("Alex1", 30, 5),
-    //     new Driver("Alex2", 31, 6),
-    //     new Driver("Alex3", 32, 7),
-    //     new Driver("Alex4", 33, 8),
-    // ]
-    //
-    //
-    // cars.forEach((car, index, array) => {
-    //     if (index % 2===0) {
-    //         car.power += (car.power/100)*10;
-    //         car.price +=(car.price/100)*5;
-    //         car.owner = drivers[index];
-    //     } if (car.age >25 && car.owner.exp <5) {
-    //         car.owner.exp ++
-    //     }
-    // });
-    //
-    // // cars.forEach((car, index) => car.age >25 && car.owner.exp <5 ? car.owner.exp +1 : "");
-    // console.log(cars);
-    //
-    // Array.prototype.sum = function (prop) {
-    //     let total =0;
-    //     for (let i = 0; i < this.length; i++) {
-    //         total +=  this[i][prop];
-    //     }
-    //     return total
-    //
-    // };
-    // console.log(cars.sum("price"));
-    //
+
+    function Driver (name, age, exp) {
+        this.name = name;
+        this.age = age;
+        this.exp = exp;
+    };
+    let drivers = [
+        new Driver("Alex1", 30, 5),
+        new Driver("Alex2", 31, 6),
+        new Driver("Alex3", 32, 7),
+        new Driver("Alex4", 33, 8),
+    ]
+
+
+    cars.forEach((car, index, array) => {
+        if (index % 2===0) {
+            car.power += (car.power/100)*10;
+            car.price +=(car.price/100)*5;
+            car.owner = drivers[index];
+        }
+    });
+
+    cars.forEach((car, index) => car.age >25 && car.owner.exp <5 ? car.owner.exp +1 : "");
+    console.log(cars);
+
+    Array.prototype.sum = function (prop) {
+        let total =0;
+        for (let i = 0; i < this.length; i++) {
+            total +=  this[i][prop];
+        }
+        return total
+
+    };
+    console.log(cars.sum("price"));
+
 
     // Задача: дан отсортированный по возрастанию массив целых чисел. Необходимо вернуть наименьший и наибольший индекс заданного элемента.
     //     Входные данные: arr — массив целых чисел значения которых по модулю не больше 10. Размер массива не более 10 элементов.
